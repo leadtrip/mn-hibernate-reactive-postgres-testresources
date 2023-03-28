@@ -1,0 +1,33 @@
+micronaut:
+  application:
+    name: mnHibernateReactivePostgres
+datasources:
+  default:
+    driver-class-name: org.postgresql.Driver
+    db-type: postgres
+flyway:
+  datasources:
+    default:
+      enabled: true
+netty:
+  default:
+    allocator:
+      max-order: 3
+jpa:
+  default:
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: none
+        connection:
+          db-type: postgres
+    reactive: true
+#vertx:
+#  pg:
+#    client:
+#      port: 5432
+#      host: the-host
+#      database: the-db
+#      user: user
+#      password: password
+#      maxSize: 5
